@@ -4,14 +4,12 @@
 
 AActor* ULevelUtilitiesFunctions::GetActorOfClassInSublevel(const UObject* WorldContextObject, const TSoftObjectPtr<UWorld> Sublevel, const TSubclassOf<AActor> ActorClass)
 {
-	// Return nothing if no sublevel provided
 	if (!Sublevel.IsValid()) return nullptr;
 
 	// Not sure of what this is doing but this is in the implementation of Unreal's GetActorOfClass
 	// I think this has an utility in Unreal's profiling system
 	QUICK_SCOPE_CYCLE_COUNTER(ULevelUtilitiesFunctions_GetActorOfClassInSublevel);
 
-	// Return nothing if no class provided
 	if (!ActorClass) return nullptr;
 
 	// Get the ULevel from the SoftPtr UWorld
@@ -22,14 +20,13 @@ AActor* ULevelUtilitiesFunctions::GetActorOfClassInSublevel(const UObject* World
 	if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
 	{
 		// Check all actors that inherit the provided class
+		// Verify if actor found is part of provided sublevel and return it
 		for (TActorIterator<AActor> It(World, ActorClass); It; ++It)
 		{
 			AActor* Actor = *It;
 			
-			// Check if the found actor is part of the provided sublevel
 			if (IsActorPartOfSublevel(Actor, Level))
 			{
-				// Return the first actor that meets all conditions
 				return Actor;
 			}
 		}
@@ -41,14 +38,12 @@ AActor* ULevelUtilitiesFunctions::GetActorOfClassInSublevel(const UObject* World
 
 void ULevelUtilitiesFunctions::GetAllActorsOfClassInSublevel(const UObject* WorldContextObject, const TSoftObjectPtr<UWorld> Sublevel, const TSubclassOf<AActor> ActorClass, TArray<AActor*>& OutActors)
 {
-	// Return nothing if no sublevel provided
 	if (!Sublevel.IsValid()) return;
 
 	// Not sure of what this is doing but this is in the implementation of Unreal's GetActorOfClass
 	// I think this has an utility in Unreal's profiling system
 	QUICK_SCOPE_CYCLE_COUNTER(ULevelUtilitiesFunctions_GetAllActorsOfClassInSublevel);
 
-	// Return nothing if no class provided
 	if (!ActorClass) return;
 
 	// Get the ULevel from the SoftPtr UWorld
@@ -59,14 +54,13 @@ void ULevelUtilitiesFunctions::GetAllActorsOfClassInSublevel(const UObject* Worl
 	if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
 	{
 		// Check all actors that inherit the provided class
+		// Verify if actor found is part of provided sublevel and add it to the out list
 		for (TActorIterator<AActor> It(World, ActorClass); It; ++It)
 		{
 			AActor* Actor = *It;
 
-			// Check if the found actor is part of the provided sublevel
 			if (IsActorPartOfSublevel(Actor, Level))
 			{
-				// Add to the OutActors list every actors that meets all conditions
 				OutActors.Add(Actor);
 			}
 		}
