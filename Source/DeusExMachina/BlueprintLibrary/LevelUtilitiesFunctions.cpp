@@ -6,15 +6,21 @@ AActor* ULevelUtilitiesFunctions::GetActorOfClassInSublevel(const UObject* World
 {
 	if (!Sublevel.IsValid()) return nullptr;
 
-	// Not sure of what this is doing but this is in the implementation of Unreal's GetActorOfClass
-	// I think this has an utility in Unreal's profiling system
-	QUICK_SCOPE_CYCLE_COUNTER(ULevelUtilitiesFunctions_GetActorOfClassInSublevel);
-
-	if (!ActorClass) return nullptr;
-
 	// Get the ULevel from the SoftPtr UWorld
 	const ULevel* Level = Sublevel.Get()->GetCurrentLevel();
 
+	return GetActorOfClassInLevel(WorldContextObject, Level, ActorClass);
+}
+
+AActor* ULevelUtilitiesFunctions::GetActorOfClassInLevel(const UObject* WorldContextObject, const ULevel* Level, const TSubclassOf<AActor> ActorClass)
+{
+	if (!IsValid(Level)) return nullptr;
+
+	if (!ActorClass) return nullptr;
+
+	// Not sure of what this is doing but this is in the implementation of Unreal's GetActorOfClass
+	// I think this has an utility in Unreal's profiling system
+	QUICK_SCOPE_CYCLE_COUNTER(ULevelUtilitiesFunctions_GetActorOfClassInSublevel);
 
 	// Retrieve the world that contains all currently loaded actors from all currently loaded sublevels
 	if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
@@ -24,8 +30,8 @@ AActor* ULevelUtilitiesFunctions::GetActorOfClassInSublevel(const UObject* World
 		for (TActorIterator<AActor> It(World, ActorClass); It; ++It)
 		{
 			AActor* Actor = *It;
-			
-			if (IsActorPartOfSublevel(Actor, Level))
+
+			if (IsActorPartOfLevel(Actor, Level))
 			{
 				return Actor;
 			}
@@ -40,15 +46,21 @@ void ULevelUtilitiesFunctions::GetAllActorsOfClassInSublevel(const UObject* Worl
 {
 	if (!Sublevel.IsValid()) return;
 
-	// Not sure of what this is doing but this is in the implementation of Unreal's GetActorOfClass
-	// I think this has an utility in Unreal's profiling system
-	QUICK_SCOPE_CYCLE_COUNTER(ULevelUtilitiesFunctions_GetAllActorsOfClassInSublevel);
-
-	if (!ActorClass) return;
-
 	// Get the ULevel from the SoftPtr UWorld
 	const ULevel* Level = Sublevel.Get()->GetCurrentLevel();
 
+	GetAllActorsOfClassInLevel(WorldContextObject, Level, ActorClass, OutActors);
+}
+
+void ULevelUtilitiesFunctions::GetAllActorsOfClassInLevel(const UObject* WorldContextObject, const ULevel* Level, const TSubclassOf<AActor> ActorClass, TArray<AActor*>& OutActors)
+{
+	if (!IsValid(Level)) return;
+
+	if (!ActorClass) return;
+
+	// Not sure of what this is doing but this is in the implementation of Unreal's GetActorOfClass
+	// I think this has an utility in Unreal's profiling system
+	QUICK_SCOPE_CYCLE_COUNTER(ULevelUtilitiesFunctions_GetAllActorsOfClassInSublevel);
 
 	// Retrieve the world that contains all currently loaded actors from all currently loaded sublevels
 	if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
@@ -59,7 +71,7 @@ void ULevelUtilitiesFunctions::GetAllActorsOfClassInSublevel(const UObject* Worl
 		{
 			AActor* Actor = *It;
 
-			if (IsActorPartOfSublevel(Actor, Level))
+			if (IsActorPartOfLevel(Actor, Level))
 			{
 				OutActors.Add(Actor);
 			}
@@ -73,13 +85,13 @@ bool ULevelUtilitiesFunctions::IsActorPartOfSublevel(const AActor* Actor, const 
 	// Get the ULevel from the SoftPtr UWorld
 	const ULevel* Level = Sublevel.Get()->GetCurrentLevel();
 
-	return IsActorPartOfSublevel(Actor, Level);
+	return IsActorPartOfLevel(Actor, Level);
 }
 
-bool ULevelUtilitiesFunctions::IsActorPartOfSublevel(const AActor* Actor, const ULevel* Sublevel)
+bool ULevelUtilitiesFunctions::IsActorPartOfLevel(const AActor* Actor, const ULevel* Level)
 {
 	// Get the ULevel where the Actor has been created
 	const ULevel* ActorLevel = Actor->GetLevel();
 
-	return ActorLevel == Sublevel;
+	return ActorLevel == Level;
 }
