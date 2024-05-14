@@ -180,6 +180,10 @@
 		{
 			"Name": "TcpMessaging",
 			"Enabled": false
+		},
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true
 		}
 	]
 }
