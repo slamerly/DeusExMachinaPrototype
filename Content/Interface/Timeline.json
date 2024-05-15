@@ -1,0 +1,66 @@
+[
+	{
+		"Name": "Step_0",
+		"Puzzles": [
+			{
+				"isDone": false,
+				"Scenes":
+				{
+					"0":
+					{
+						"Test":
+						{
+							"469F130F4896AC7A45967BA6AB644AF8":
+							{
+								"SphereVisibility": true
+							},
+							"2B58F028460B56E26927AEAC33328223":
+							{
+								"SphereVisibility": true
+							},
+							"7990A67B4F44B02540819498379238B5":
+							{
+								"SphereVisibility": true
+							}
+						},
+						"RotationSupports":
+						{
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"Name": "Step_1",
+		"Puzzles": [
+			{
+				"isDone": false,
+				"Scenes":
+				{
+					"0":
+					{
+						"Test":
+						{
+							"469F130F4896AC7A45967BA6AB644AF8":
+							{
+								"SphereVisibility": false
+							},
+							"2B58F028460B56E26927AEAC33328223":
+							{
+								"SphereVisibility": true
+							},
+							"7990A67B4F44B02540819498379238B5":
+							{
+								"SphereVisibility": true
+							}
+						},
+						"RotationSupports":
+						{
+						}
+					}
+				}
+			}
+		]
+	}
+]
