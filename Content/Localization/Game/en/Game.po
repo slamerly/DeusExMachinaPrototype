@@ -1,0 +1,57 @@
+﻿# Game English translation.
+# Fill out your copyright notice in the Description page of Project Settings.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Game\n"
+"POT-Creation-Date: 2024-05-22 11:19\n"
+"PO-Revision-Date: 2024-05-22 11:19\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Key:	0037C49C43331F62F4F09C9319BCB4A6
+#. SourceLocation:	/Game/Narration/Script/E_Speaker.E_Speaker.DisplayNameMap(1 - Value).DisplayNameMap
+#: /Game/Narration/Script/E_Speaker.E_Speaker.DisplayNameMap(1 - Value).DisplayNameMap
+msgctxt ",0037C49C43331F62F4F09C9319BCB4A6"
+msgid "Romeo"
+msgstr "Romeo"
+
+#. Key:	00C484384CB6510584E49386BE2C5F53
+#. SourceLocation:	/Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(1).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+#: /Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(1).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+msgctxt ",00C484384CB6510584E49386BE2C5F53"
+msgid "This is an introduction."
+msgstr "This is an introduction."
+
+#. Key:	020BBC104DD6590BA85E909CE09F1C77
+#. SourceLocation:	/Game/Narration/Script/E_Speaker.E_Speaker.DisplayNameMap(0 - Value).DisplayNameMap
+#: /Game/Narration/Script/E_Speaker.E_Speaker.DisplayNameMap(0 - Value).DisplayNameMap
+msgctxt ",020BBC104DD6590BA85E909CE09F1C77"
+msgid "Narrator"
+msgstr "Narrator"
+
+#. Key:	5E0F9B1842FB59C366D22ABB935E3E51
+#. SourceLocation:	/Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(2).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+#: /Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(2).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+msgctxt ",5E0F9B1842FB59C366D22ABB935E3E51"
+msgid "A young couple living the best they can, suddenly an illness strike the wife. Nothing can save her, the illness is so intense she is bedridden. One strange night the husband finally manage to sleep before her,  in a fraction of second a weird hooded man appear in front of her, he present himself has the Count, with flattery he get the wife’s trust and make her sign a deal. Early in the morning the husband wake up finding his wife covered in wood she just look like a puppet that took inspiration from her. Little by little the husband fall into despair because no science can help him, even though he tried religion nothing worked to save her. But one fateful night he ends up in front of a strange theater were it’s written on the front “Bring all your puppet we can make them revive”. With no hesitation the husband go get his wife and bring her in the Theater, a hooded man welcome him and present himself by the name of The Count. The Count remove his hood and the husband can now clearly see their faces and the fact that he looks like a puppet itself. The Count politely present himself and what he do for living (well living AH good one Jacob), and ask the husband if he is giving her wife to him but after the husband explain his story the Count suddenly switch face and offer the help with the Theater even though this Theater have basically his own conscience and this will not be that easy.  With all the explanation done about the Theater and what the husband must do to avoid the death of his wife, the Theater metamorphose into the first scene of Romeo and Juliet. The Count repeat one single sentence before going into silence (for the puzzles) “Remember you should take care and save her from what the play is.”"
+msgstr "A young couple living the best they can, suddenly an illness strike the wife. Nothing can save her, the illness is so intense she is bedridden. One strange night the husband finally manage to sleep before her,  in a fraction of second a weird hooded man appear in front of her, he present himself has the Count, with flattery he get the wife’s trust and make her sign a deal. Early in the morning the husband wake up finding his wife covered in wood she just look like a puppet that took inspiration from her. Little by little the husband fall into despair because no science can help him, even though he tried religion nothing worked to save her. But one fateful night he ends up in front of a strange theater were it’s written on the front “Bring all your puppet we can make them revive”. With no hesitation the husband go get his wife and bring her in the Theater, a hooded man welcome him and present himself by the name of The Count. The Count remove his hood and the husband can now clearly see their faces and the fact that he looks like a puppet itself. The Count politely present himself and what he do for living (well living AH good one Jacob), and ask the husband if he is giving her wife to him but after the husband explain his story the Count suddenly switch face and offer the help with the Theater even though this Theater have basically his own conscience and this will not be that easy.  With all the explanation done about the Theater and what the husband must do to avoid the death of his wife, the Theater metamorphose into the first scene of Romeo and Juliet. The Count repeat one single sentence before going into silence (for the puzzles) “Remember you should take care and save her from what the play is.”"
+
+#. Key:	6E0934CA421F8C82EB3FC28F6BB1B1F7
+#. SourceLocation:	/Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(0).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+#: /Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(0).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+msgctxt ",6E0934CA421F8C82EB3FC28F6BB1B1F7"
+msgid "Hello."
+msgstr "Hello."
+
+#. Key:	B29EA8384D0CCD059F6E25B431B5D7F9
+#. SourceLocation:	/Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(3).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+#: /Game/Narration/Script/DT_Narration.DT_Narration.Intro.Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4(3).Phase_6_29CB8EDC4E8DD6BFD5FA6492DB4C63E4.Text_5_24408BD0459CBB820748B0A70706E6EF
+msgctxt ",B29EA8384D0CCD059F6E25B431B5D7F9"
+msgid "End."
+msgstr "End."
+
